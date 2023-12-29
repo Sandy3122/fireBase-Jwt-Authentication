@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Splash Screen</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #bc2762;
+            overflow: hidden;
+            transition: background-color 1s ease;
+        }
+    
+        #splash-container {
+            text-align: center;
+            animation: closeAnimation 5s ease-out forwards;
+        }
+
+        #splash-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        #main-content {
+            display: none;
+            text-align: center;
+        }
+
+        @keyframes closeAnimation {
+            0% {
+                transform: scale(1) rotate(0deg);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(0.8) rotate(360deg);
+                opacity: 0.5;
+            }
+
+            100% {
+                transform: scale(1) rotate(360deg);
+                opacity: 0.8;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="splash-container">
+        <img id="splash-image" src="/B1.jpg" alt="Splash Image">
+    </div>
+
+    <div id="main-content">
+        <h1>Welcome to the Main Content!</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio soluta laboriosam amet eligendi excepturi
+            eveniet! Aperiam reprehenderit, delectus nemo atque, perspiciatis quidem corporis hic accusamus cum velit at
+            mollitia a.</p>
+    </div>
+
+    <script>
+        setTimeout(function () {
+            document.getElementById('splash-container').style.display = 'none';
+            document.getElementById('main-content').style.display = 'block';
+            document.body.style.backgroundColor = '#e0e0e0';
+        }, 5000);
+    </script>
+</body>
+</html>
