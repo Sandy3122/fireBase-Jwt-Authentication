@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,7 +20,7 @@
             overflow: hidden;
             transition: background-color 1s ease;
         }
-    
+
         #splash-container {
             text-align: center;
             animation: closeAnimation 5s ease-out forwards;
@@ -65,13 +66,12 @@
             eveniet! Aperiam reprehenderit, delectus nemo atque, perspiciatis quidem corporis hic accusamus cum velit at
             mollitia a.</p>
     </div>
-
-    <script>
-        setTimeout(function () {
-            document.getElementById('splash-container').style.display = 'none';
-            document.getElementById('main-content').style.display = 'block';
-            document.body.style.backgroundColor = '#e0e0e0';
-        }, 5000);
-    </script>
 </body>
+<script>
+    setTimeout(function () {
+        document.getElementById('splash-container').style.display = 'none';
+        document.getElementById('main-content').style.display = 'block';
+        document.body.style.backgroundColor = '#e0e0e0';
+    }, 5000);
+</script>
 </html>
